@@ -1,0 +1,28 @@
+{
+  "models": [
+    {
+      "name": "NudeNet v3 320n",
+      "kind": "nudenet-onnx",
+      "model": "models/nudenet/320n.onnx"
+    },
+    {
+      "name": "AdamCodd ViT NSFW full ONNX",
+      "kind": "hf-onnx",
+      "model": "models/adamcodd/onnx/model.onnx",
+      "config": "models/adamcodd/onnx/config.json",
+      "processor": "models/adamcodd/onnx/preprocessor_config.json"
+    },
+    {
+      "name": "Falconsai ViT NSFW",
+      "kind": "huggingface",
+      "model_dir": "models/falconsai"
+    },
+    {
+      "name": "GantMan MobileNetV2",
+      "kind": "tensorflow-keras",
+      "model": "models/gantman/mobilenet_v2_140_224/saved_model.h5",
+      "input_size": 224,
+      "labels": ["drawings", "hentai", "neutral", "porn", "sexy"]
+    }
+  ]
+}

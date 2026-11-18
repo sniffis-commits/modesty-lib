@@ -1,0 +1,109 @@
+{
+  "models": [
+    {
+      "name": "Whisper tiny English CPU int8",
+      "kind": "faster-whisper",
+      "model": "tiny.en",
+      "device": "cpu",
+      "compute_type": "int8",
+      "language": "en"
+    },
+    {
+      "name": "Whisper tiny multilingual CPU int8",
+      "kind": "faster-whisper",
+      "model": "tiny",
+      "device": "cpu",
+      "compute_type": "int8",
+      "language": "en"
+    },
+    {
+      "name": "Whisper base English CPU int8",
+      "kind": "faster-whisper",
+      "model": "base.en",
+      "device": "cpu",
+      "compute_type": "int8",
+      "language": "en"
+    },
+    {
+      "name": "Whisper base multilingual CPU int8",
+      "kind": "faster-whisper",
+      "model": "base",
+      "device": "cpu",
+      "compute_type": "int8",
+      "language": "en"
+    },
+    {
+      "name": "Whisper small English CPU int8",
+      "kind": "faster-whisper",
+      "model": "small.en",
+      "device": "cpu",
+      "compute_type": "int8",
+      "language": "en"
+    },
+    {
+      "name": "Whisper small multilingual CPU int8",
+      "kind": "faster-whisper",
+      "model": "small",
+      "device": "cpu",
+      "compute_type": "int8",
+      "language": "en"
+    },
+    {
+      "name": "Whisper medium English CPU int8",
+      "kind": "faster-whisper",
+      "model": "medium.en",
+      "device": "cpu",
+      "compute_type": "int8",
+      "language": "en"
+    },
+    {
+      "name": "Whisper medium multilingual CPU int8",
+      "kind": "faster-whisper",
+      "model": "medium",
+      "device": "cpu",
+      "compute_type": "int8",
+      "language": "en"
+    },
+    {
+      "name": "Whisper large-v1 CPU int8",
+      "kind": "faster-whisper",
+      "model": "large-v1",
+      "device": "cpu",
+      "compute_type": "int8",
+      "language": "en"
+    },
+    {
+      "name": "Whisper large-v2 CPU int8",
+      "kind": "faster-whisper",
+      "model": "large-v2",
+      "device": "cpu",
+      "compute_type": "int8",
+      "language": "en"
+    },
+    {
+      "name": "Whisper large-v3 CPU int8",
+      "kind": "faster-whisper",
+      "model": "large-v3",
+      "device": "cpu",
+      "compute_type": "int8"
+    },
+    {
+      "name": "Whisper large-v3-turbo CPU int8",
+      "kind": "faster-whisper",
+      "model": "large-v3-turbo",
+      "device": "cpu",
+      "compute_type": "int8",
+      "language": "en"
+    },
+    {
+      "name": "PANNs event model",
+      "kind": "audio-events",
+      "threshold": 0.5
+    },
+    {
+      "name": "PANNs sexual-vocalization head",
+      "kind": "sexual-vocalization",
+      "threshold": 0.5
+    }
+  ]
+}

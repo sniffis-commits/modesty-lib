@@ -1,0 +1,12 @@
+{
+  "models": [
+    {
+      "name": "Meta Llama Guard 4 12B Vision",
+      "kind": "llama-guard-vision",
+      "model_dir": "models/llama-guard-4-12b",
+      "device": "cpu",
+      "torch_dtype": "auto",
+      "max_new_tokens": 16
+    }
+  ]
+}

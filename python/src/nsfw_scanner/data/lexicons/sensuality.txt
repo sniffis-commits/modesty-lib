@@ -1,0 +1,34 @@
+# Sensuality lexicon - extra terms for the text/subtitle verdict.
+#
+# Syntax:
+#   term      word-boundary match (default)
+#   ~term     substring match (long, unambiguous terms only)
+#   -term     drop a built-in term
+#
+# The built-in list already covers the common cases; add here what your
+# users actually hit.  Set NSFW_LEXICON_DIR to use your own directory.
+
+# --- site names (substring: they appear glued to other words) ---------
+~pornhub
+~onlyfans
+~fansly
+~chaturbate
+~xnxx
+~xvideos
+~xhamster
+~redtube
+~youporn
+~spankbang
+
+# --- single words ------------------------------------------------------
+softcore
+blowjob
+titjob
+deepthroat
+orgy
+topless
+undressed
+
+# --- hebrew ------------------------------------------------------------
+בילי בייבי
+שדיים

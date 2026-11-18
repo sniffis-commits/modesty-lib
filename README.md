@@ -1,36 +1,46 @@
-<!-- logo -->
 <p align="center">
-  <img src="https://modesty.eu.org/images/logos/modesty-lib.svg" alt="Modesty" width="96" height="96">
+  <img src="assets/logo.svg" alt="Modesty" width="110" height="110">
+</p>
+
+<p align="center">
+  <img src="assets/modesty-brand.svg" alt="Modesty — NSFW protection" width="260">
 </p>
 
 # modesty-lib
 
 > Core scanning library (Python + Rust)
 
-The Modesty scanner core. Python package `modesty_nsfw_scanner` rates websites, images, video and audio on a 1–10 scale with ONNX models. Rust mirror (`nsfw-lib-rust`) in the same repo, plus the shared-memory frame ring daemon (`nsfw-ringd`).
+The Modesty scanner core. `python/` is the `modesty_nsfw_scanner` Python package (images, websites, video, audio, rated 1–10 with ONNX). `rust/` mirrors the core in Rust; `ringd/` is the shared-memory frame ring daemon. Models are **not** bundled — downloaded on first use from `modesty-models`.
+
+## Layout
+
+| Path | What |
+|---|---|
+| `python/` | source from the monorepo |
+| `rust/` | source from the monorepo |
+| `ringd/` | source from the monorepo |
 
 ## Details
 
 | | |
 |---|---|
 | Language | Python + Rust |
-| License | MIT (code) · model weights Apache-2.0 / CC in modesty-models |
-| Website | [https://modesty.eu.org](https://modesty.eu.org) |
-| Full repository map | [REPO_MAP.md](https://github.com/sniffis-commits/nfsw_scanner/blob/main/docs/REPO_MAP.md) |
-| Status | Scaffold — code is being split from the private monorepo |
+| License | MIT (code) · models Apache-2.0 / CC |
+| Website | [https://modesty.cia.org.il](https://modesty.cia.org.il) |
+| Repository map | [REPO_MAP.md](https://github.com/sniffis-commits/nfsw_scanner/blob/main/docs/REPO_MAP.md) |
+| Split from | private monorepo `sniffis-commits/nfsw_scanner` |
 
 ## Quick start
 
 ```sh
-pip install modesty_nsfw_scanner
+pip install ./python
 ```
 
 ## About Modesty
 
-Modesty is a privacy-first NSFW content scanner. Scanning runs locally by
-default; uploads are always opt-in. The public packages are split out of the
-private monorepo into standalone repositories — see the
-[repository map](https://github.com/sniffis-commits/nfsw_scanner/blob/main/docs/REPO_MAP.md) for the full local-to-GitHub naming.
+Privacy-first NSFW scanner. Local scanning by default; uploads are opt-in.
+These public repos are split from a private monorepo — see the
+[repository map](https://github.com/sniffis-commits/nfsw_scanner/blob/main/docs/REPO_MAP.md) for the full local-to-GitHub naming. Model weights are
+in `modesty-models`; the free domain DB release is in `modesty-db`.
 
-Licensed under MIT (code) · model weights Apache-2.0 / CC in modesty-models. See the website's
-[license review](https://modesty.eu.org/?p=licenses) for third-party data and model terms.
+Third-party data/model terms are on the [site's license page](https://modesty.cia.org.il/?p=licenses).

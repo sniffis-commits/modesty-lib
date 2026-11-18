@@ -1,0 +1,39 @@
+# Look-alike words masked before substring matching.
+# "analysis" contains "anal", "essex" contains "sex", "peacock" contains
+# "cock" - without this mask the Scunthorpe problem fires.
+
+analysis
+analyst
+analytics
+analog
+analogue
+canal
+banal
+banana
+essex
+sussex
+middlesex
+sextant
+sextet
+scunthorpe
+grape
+grapefruit
+therapist
+therapy
+dickens
+dickinson
+hitchcock
+peacock
+cocktail
+cockpit
+gamecock
+woodcock
+adulthood
+class
+classic
+document
+appendix
+excuse
+execute
+exodus
+textile

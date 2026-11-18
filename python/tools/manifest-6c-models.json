@@ -1,0 +1,18 @@
+{
+  "models": [
+    {
+      "name": "emiliantolo-pytorch-nsfw-model",
+      "kind": "tensorflow-keras",
+      "model": "emiliantolo/pytorch_nsfw_model/model.h5",
+      "input_size": 224,
+      "labels": ["drawings", "hentai", "neutral", "porn", "sexy"]
+    },
+    {
+      "name": "esvinj312-nudity-detection",
+      "kind": "tensorflow-keras",
+      "model": "esvinj312/nudity-detection/model.h5",
+      "input_size": 224,
+      "labels": ["nsfw", "sfw"]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modesty_nsfw_scanner"
+version = "0.3.0"
+description = "Sequential low-memory NSFW website/image/media scanner (ONNX)"
+readme = "README.md"
+requires-python = ">=3.10,<3.15"
+license = { text = "MIT" }
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "pillow",
+    "numpy>=1.24,<2",
+    "onnxruntime>=1.17",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+# The media scanner needs ffmpeg + ffprobe on PATH (see NSFW_FFMPEG /
+# NSFW_FFPROBE).  They are external binaries, not Python packages.
+media = []
+# Optional dependency for local speech-to-text and audio-tier evaluation.
+audio = ["faster-whisper>=1.0"]
+# PyAV: decode the frames in-process (no ffmpeg binary needed).  It is
+# faster at decoding but the end-to-end scan is ~7% slower than the
+# external ffmpeg (which overlaps with the model better), and it brings
+# its own FFmpeg build, so the pixels are not bit-identical.
+av = ["av>=13,<17"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+# ONNX models are NOT bundled in the PyPI wheel (they are ~230 MB total,
+# above PyPI's 100 MB per-file limit). They are downloaded on first use from
+# https://github.com/sniffis-commits/modesty-models (see model_downloader.py).
+# Keep only the small data files in the wheel.
+nsfw_scanner = ["data/lexicons/*.txt"]
